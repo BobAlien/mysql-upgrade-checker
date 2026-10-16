@@ -9,8 +9,6 @@ new|N/A|Both deprecated in MySQL 8.0.35 and MySQL 8.2.0, and now removed.
 language|N/A|Deprecated in MySQL 5.5, and now removed.
 ssl|tls_version|Default value TLSv1.2,TLSv1.3 (or TLSv1.2 only if OpenSSL is lower than 1.1.1)
 admin_ssl|admin_tls_version|Default value TLSv1.2,TLSv1.3 (or TLSv1.2 only if OpenSSL is lower than 1.1.1)
-have_ssl|N/A|
-have_openssl|N/A|
 default_authentication_plugin|authentication_policy|The syntax for authentication_policy has been changed. See the description of authentication_policy for more information.
 skip_host_cache|host_cache_size=0|Use SET GLOBAL host_cache_size = 0 instead
 innodb|N/A|The InnoDB storage engine is always enabled, and it is not possible to disable it.
@@ -25,5 +23,4 @@ master_info_file|N/A|The use of files for the applier metadata repository and th
 master_info_repository|N/A|The use of files for the applier metadata repository and the connection metadata repository has been superseded by crash-safe tables, and is no longer supported.
 transaction_write_set_extraction|N/A|
 group_replication_ip_whitelist|group_replication_ip_allowlist|
-group_replication_primary_member|N/A|No longer needed; check the MEMBER_ROLE column of the Performance Schema replication_group_members table instead.
 expire_logs_days|binlog_expire_logs_seconds|In place of expire_logs_days, use binlog_expire_logs_seconds, which allows you to specify expiration periods other than (only) in an integral number of days.
