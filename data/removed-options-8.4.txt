@@ -1,0 +1,28 @@
+removed|alternative|comment
+binlog_transaction_dependency_tracking|N/A|There are no plans to replace this variable or its functionality, which has been made internal to the server
+group_replication_recovery_complete_at|N/A|In MySQL 8.4 and later, the policy applied during the distributed recovery process is always to mark a new member online only after it has received, certified, and applied all transactions that took place before it joined the group
+avoid_temporal_upgrade|N/A|Both variables have been removed; there are no plans to replace either of them
+show_old_temporals|N/A|Both variables have been removed; there are no plans to replace either of them
+no_dd_upgrade|upgrade|Deprecated in MySQL 8.0.16, now removed. Use --upgrade=NONE instead. 
+old|N/A|Both deprecated in MySQL 8.0.35 and MySQL 8.2.0, and now removed.
+new|N/A|Both deprecated in MySQL 8.0.35 and MySQL 8.2.0, and now removed.
+language|N/A|Deprecated in MySQL 5.5, and now removed. 
+ssl|tls_version|Default value TLSv1.2,TLSv1.3 (or TLSv1.2 only if OpenSSL is lower than 1.1.1)
+admin_ssl|admin_tls_version|Default value TLSv1.2,TLSv1.3 (or TLSv1.2 only if OpenSSL is lower than 1.1.1)
+have_ssl|N/A|
+have_openssl|N/A|
+default_authentication_plugin|authentication_policy|The syntax for authentication_policy has been changed. See the description of authentication_policy for more information.
+skip_host_cache|host_cache_size|Use SET GLOBAL host_cache_size = 0 instead
+innodb|N/A|The InnoDB storage engine is always enabled, and it is not possible to disable it. 
+skip_innodb|N/A|The InnoDB storage engine is always enabled, and it is not possible to disable it.
+character_set_client_handshake|N/A|These options were formerly used for compatibility with very old versions of MySQL which are no longer supported or maintained, and thus no longer serve any useful purpose. 
+old_style_user_limits|N/A|These options were formerly used for compatibility with very old versions of MySQL which are no longer supported or maintained, and thus no longer serve any useful purpose.
+slave_rows_search_algorithms|N/A|The algorithm used by the replication applier to look up table rows when applying updates or deletes is now always HASH_SCAN,INDEX_SCAN, and is no longer configurable by the user.
+log_bin_use_v1_events|N/A|This allowed source servers running MySQL 5.7 and newer to replicate to earlier versions of MySQL which are no longer supported or maintained. 
+relay_log_info_file|N/A|The use of files for the applier metadata repository and the connection metadata repository has been superseded by crash-safe tables, and is no longer supported.
+relay_log_info_repository|N/A|The use of files for the applier metadata repository and the connection metadata repository has been superseded by crash-safe tables, and is no longer supported.
+master_info_file|N/A|The use of files for the applier metadata repository and the connection metadata repository has been superseded by crash-safe tables, and is no longer supported.
+master_info_repository|N/A|The use of files for the applier metadata repository and the connection metadata repository has been superseded by crash-safe tables, and is no longer supported.
+transaction_write_set_extraction|N/A|
+group_replication_ip_whitelist|group_replication_ip_allowlist|
+group_replication_primary_member|N/A|No longer needed; check the MEMBER_ROLE column of the Performance Schema replication_group_members table instead. 
